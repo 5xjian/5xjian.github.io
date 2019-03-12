@@ -2,27 +2,30 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>wordpress后台添加用户邮箱必填项解除 - 5xjian&#39;s Studio</title>
+<title>批量删微博 - 5xjian&#39;s Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="wordpress在4.0之后就已经取消了数据库的用户邮箱的必填项，现在看来邮箱确实没什么用，近期在项目中批量载入用户时，就在wordpress中的邮箱必填项中收到了阻碍。解除很多人多想着在form上面链接的user-editor.php或者是user-new.php中做限制，但是这样子有污染代码的嫌疑直接屏蔽即可在\wp-admin\includes\user.php中有个/* checking">
-<meta name="keywords" content="wordpress">
+    <meta name="description" content="tags:[小技巧]   “有什么黑科技可以批量删除微博?”  不知道为什么要把过往的记录都删掉，可能害怕回首吧。看了一遍，都基本要付费删除，看来真是一笔生意啊……就不封装了，直接贴代码↓">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wordpress后台添加用户邮箱必填项解除">
-<meta property="og:url" content="https://www.5xjian.cn/fycsxp.html">
+<meta property="og:title" content="批量删微博">
+<meta property="og:url" content="https://www.5xjian.cn/okiiqt.html">
 <meta property="og:site_name" content="5xjian&#39;s Studio">
-<meta property="og:description" content="wordpress在4.0之后就已经取消了数据库的用户邮箱的必填项，现在看来邮箱确实没什么用，近期在项目中批量载入用户时，就在wordpress中的邮箱必填项中收到了阻碍。解除很多人多想着在form上面链接的user-editor.php或者是user-new.php中做限制，但是这样子有污染代码的嫌疑直接屏蔽即可在\wp-admin\includes\user.php中有个/* checking">
+<meta property="og:description" content="tags:[小技巧]   “有什么黑科技可以批量删除微博?”  不知道为什么要把过往的记录都删掉，可能害怕回首吧。看了一遍，都基本要付费删除，看来真是一笔生意啊……就不封装了，直接贴代码↓">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-12T03:24:03.326Z">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/196393/1552360090078-3c7b5e44-c39a-42a8-b816-b4d696be1541.png#align=left&display=inline&height=674&name=image.png&originHeight=674&originWidth=1555&size=676636&status=done&width=1555">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/196393/1552360201310-250ba621-6f4c-46fc-b41c-1ac20dd7679a.png#align=left&display=inline&height=929&name=image.png&originHeight=929&originWidth=1348&size=266252&status=done&width=1348">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/196393/1552360342874-96eae2fa-3c15-4a86-8841-3eb3e5343aac.png#align=left&display=inline&height=37&name=image.png&originHeight=37&originWidth=630&size=4279&status=done&width=630">
+<meta property="og:updated_time" content="2019-03-12T03:24:03.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wordpress后台添加用户邮箱必填项解除">
-<meta name="twitter:description" content="wordpress在4.0之后就已经取消了数据库的用户邮箱的必填项，现在看来邮箱确实没什么用，近期在项目中批量载入用户时，就在wordpress中的邮箱必填项中收到了阻碍。解除很多人多想着在form上面链接的user-editor.php或者是user-new.php中做限制，但是这样子有污染代码的嫌疑直接屏蔽即可在\wp-admin\includes\user.php中有个/* checking">
+<meta name="twitter:title" content="批量删微博">
+<meta name="twitter:description" content="tags:[小技巧]   “有什么黑科技可以批量删除微博?”  不知道为什么要把过往的记录都删掉，可能害怕回首吧。看了一遍，都基本要付费删除，看来真是一笔生意啊……就不封装了，直接贴代码↓">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/png/196393/1552360090078-3c7b5e44-c39a-42a8-b816-b4d696be1541.png#align=left&display=inline&height=674&name=image.png&originHeight=674&originWidth=1555&size=676636&status=done&width=1555">
 
 
 
-<link rel="alternative" href="/atom.xml" title="wordpress后台添加用户邮箱必填项解除" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="批量删微博" type="application/atom+xml">
 
 
 
@@ -100,7 +103,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo3.png" alt="wordpress后台添加用户邮箱必填项解除" height="28">
+                <img src="/images/logo3.png" alt="批量删微博" height="28">
             
             </a>
         </div>
@@ -142,13 +145,13 @@ var _hmt = _hmt || [];
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-13T02:25:10.000Z">2018-11-13</time>
+                <time class="level-item has-text-grey" datetime="2019-03-12T03:04:48.000Z">2019-03-12</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 212 个字)
+                    2 分钟 读完 (大约 328 个字)
                 </span>
                 
             </div>
@@ -156,21 +159,23 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                wordpress后台添加用户邮箱必填项解除
+                批量删微博
             
         </h1>
         <div class="content">
-            <p>wordpress在4.0之后就已经取消了数据库的用户邮箱的必填项，现在看来邮箱确实没什么用，近期在项目中批量载入用户时，就在wordpress中的邮箱必填项中收到了阻碍。<br>解除很多人多想着在form上面链接的user-editor.php或者是user-new.php中做限制，但是这样子有污染代码的嫌疑<br>直接屏蔽即可<br>在\wp-admin\includes\user.php中有个/* checking email address */的模块，注释即可<br><a id="more"></a><br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* checking email address */</span></span><br><span class="line"><span class="hljs-comment">// if ( empty( $user-&gt;user_email ) ) &#123;</span></span><br><span class="line"><span class="hljs-comment">// 	$errors-&gt;add( 'empty_email', __( '&lt;strong&gt;ERROR&lt;/strong&gt;: Please enter an email address.' ), array( 'form-field' =&gt; 'email' ) );</span></span><br><span class="line"><span class="hljs-comment">// &#125; elseif ( !is_email( $user-&gt;user_email ) ) &#123;</span></span><br><span class="line"><span class="hljs-comment">// 	$errors-&gt;add( 'invalid_email', __( '&lt;strong&gt;ERROR&lt;/strong&gt;: The email address isn’t correct.' ), array( 'form-field' =&gt; 'email' ) );</span></span><br><span class="line"><span class="hljs-comment">// &#125; elseif ( ( $owner_id = email_exists($user-&gt;user_email) ) &amp;&amp; ( !$update || ( $owner_id != $user-&gt;ID ) ) ) &#123;</span></span><br><span class="line"><span class="hljs-comment">// 	$errors-&gt;add( 'email_exists', __('&lt;strong&gt;ERROR&lt;/strong&gt;: This email is already registered, please choose another one.'), array( 'form-field' =&gt; 'email' ) );</span></span><br><span class="line"><span class="hljs-comment">// &#125;</span></span><br></pre></td></tr></table></figure></p>
+            <p>tags:[小技巧]</p>
+<hr>
+<blockquote>
+<p>“有什么黑科技可以批量删除微博?”</p>
+</blockquote>
+<p>不知道为什么要把过往的记录都删掉，可能害怕回首吧。<br>看了一遍，都基本要付费删除，看来真是一笔生意啊……<br><strong>就不封装了，直接贴代码↓</strong><br><a id="more"></a></p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> s = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'script'</span>);</span><br><span class="line"></span><br><span class="line">s.setAttribute(</span><br><span class="line"></span><br><span class="line"><span class="hljs-string">'src'</span>,</span><br><span class="line"></span><br><span class="line"><span class="hljs-string">'https://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js'</span></span><br><span class="line"></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">s.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span> (!$(<span class="hljs-string">'a[action-type="feed_list_delete"]'</span>)) &#123;</span><br><span class="line"></span><br><span class="line">$(<span class="hljs-string">'a.next'</span>).click();</span><br><span class="line"></span><br><span class="line">&#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">$(<span class="hljs-string">'a[action-type="feed_list_delete"]'</span>)[<span class="hljs-number">0</span>].click();</span><br><span class="line"></span><br><span class="line">$(<span class="hljs-string">'a[action-type="ok"]'</span>)[<span class="hljs-number">0</span>].click();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// scroll bottom let auto load</span></span><br><span class="line"></span><br><span class="line">$(<span class="hljs-string">'html, body'</span>).animate(&#123; <span class="hljs-attr">scrollTop</span>: $(<span class="hljs-built_in">document</span>).height() &#125;, <span class="hljs-string">'slow'</span>);</span><br><span class="line"></span><br><span class="line">&#125;, <span class="hljs-number">800</span>);</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">document</span>.head.appendChild(s);</span><br></pre></td></tr></table></figure>
+<p><a name="bc120b21"></a></p>
+<h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><p><a name="bfa8bb37"></a></p>
+<h2 id="进入个人中心"><a href="#进入个人中心" class="headerlink" title="进入个人中心"></a>进入个人中心</h2><p><strong>类似下面的这个页面↓</strong><br><br><img src="https://cdn.nlark.com/yuque/0/2019/png/196393/1552360090078-3c7b5e44-c39a-42a8-b816-b4d696be1541.png#align=left&amp;display=inline&amp;height=674&amp;name=image.png&amp;originHeight=674&amp;originWidth=1555&amp;size=676636&amp;status=done&amp;width=1555" alt="image.png"><br><a name="e2eaaf4d"></a></p>
+<h2 id="粘贴到console回车运行"><a href="#粘贴到console回车运行" class="headerlink" title="粘贴到console回车运行"></a>粘贴到console回车运行</h2><p><img src="https://cdn.nlark.com/yuque/0/2019/png/196393/1552360201310-250ba621-6f4c-46fc-b41c-1ac20dd7679a.png#align=left&amp;display=inline&amp;height=929&amp;name=image.png&amp;originHeight=929&amp;originWidth=1348&amp;size=266252&amp;status=done&amp;width=1348" alt="image.png"><br><a name="28dd7a60"></a></p>
+<h2 id="出现错误或自动刷新，重复上述步骤"><a href="#出现错误或自动刷新，重复上述步骤" class="headerlink" title="出现错误或自动刷新，重复上述步骤"></a>出现错误或自动刷新，重复上述步骤</h2><p><img src="https://cdn.nlark.com/yuque/0/2019/png/196393/1552360342874-96eae2fa-3c15-4a86-8841-3eb3e5343aac.png#align=left&amp;display=inline&amp;height=37&amp;name=image.png&amp;originHeight=37&amp;originWidth=630&amp;size=4279&amp;status=done&amp;width=630" alt="image.png"><br><strong>⚠️ **</strong>注意：此举是直接按顺序去删除微博的，不想这样子搞的，可以在原有基础上做一些元素的判断**</p>
 
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/wordpress/">wordpress</a>
-                </div>
-            </div>
         </div>
         
         
@@ -218,17 +223,10 @@ var _hmt = _hmt || [];
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/dbtn2a.html">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">单服务器媒体存储</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/dslq5s.html">
-                <span class="level-item">【收藏帖】度盘解决限速</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/gqy7yx.html">
+                <span class="level-item">Blob视频地址下载</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -242,7 +240,7 @@ var _hmt = _hmt || [];
     <div class="card-content">
         <h3 class="title is-5 has-text-weight-normal">评论</h3>
         
-<div id="SOHUCS" sid="fycsxp.html"></div>
+<div id="SOHUCS" sid="okiiqt.html"></div>
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
 <script type="text/javascript">
 window.changyan.api.config({
@@ -937,7 +935,7 @@ window.changyan.api.config({
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo3.png" alt="wordpress后台添加用户邮箱必填项解除" height="28">
+                    <img src="/images/logo3.png" alt="批量删微博" height="28">
                 
                 </a>
             </div>
