@@ -7,18 +7,18 @@
 
 
 
-    <meta name="description" content="普通用法wx:key=&amp;quot;字符串&amp;quot; 解释 这个”字符串”代表在 for 循环的 array 中 item 的某个“属性”该“属性” 的值需要是列表中唯一的字符串或数字，且不能动态改变。用于被遍历的组件需要多个属性的时候。123456789//test.jsdata: &amp;#123;    input_data: [        &amp;#123; id: 1, unique: &quot;uni">
+    <meta name="description" content="普通用法wx:key=&amp;quot;字符串&amp;quot; 解释 这个”字符串”代表在 for 循环的 array 中 item 的某个“属性”该“属性” 的值需要是列表中唯一的字符串或数字，且不能动态改变。用于被遍历的组件需要多个属性的时候。  123456789//test.jsdata: &amp;#123;    input_data: [        &amp;#123; id: 1, unique: &quot;">
 <meta name="keywords" content="小程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1️⃣wx:key">
 <meta property="og:url" content="https://www.5xjian.cn/ma0pri.html">
 <meta property="og:site_name" content="5xjian&#39;s Studio">
-<meta property="og:description" content="普通用法wx:key=&amp;quot;字符串&amp;quot; 解释 这个”字符串”代表在 for 循环的 array 中 item 的某个“属性”该“属性” 的值需要是列表中唯一的字符串或数字，且不能动态改变。用于被遍历的组件需要多个属性的时候。123456789//test.jsdata: &amp;#123;    input_data: [        &amp;#123; id: 1, unique: &quot;uni">
+<meta property="og:description" content="普通用法wx:key=&amp;quot;字符串&amp;quot; 解释 这个”字符串”代表在 for 循环的 array 中 item 的某个“属性”该“属性” 的值需要是列表中唯一的字符串或数字，且不能动态改变。用于被遍历的组件需要多个属性的时候。  123456789//test.jsdata: &amp;#123;    input_data: [        &amp;#123; id: 1, unique: &quot;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-12T03:24:03.317Z">
+<meta property="og:updated_time" content="2019-03-13T06:37:04.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1️⃣wx:key">
-<meta name="twitter:description" content="普通用法wx:key=&amp;quot;字符串&amp;quot; 解释 这个”字符串”代表在 for 循环的 array 中 item 的某个“属性”该“属性” 的值需要是列表中唯一的字符串或数字，且不能动态改变。用于被遍历的组件需要多个属性的时候。123456789//test.jsdata: &amp;#123;    input_data: [        &amp;#123; id: 1, unique: &quot;uni">
+<meta name="twitter:description" content="普通用法wx:key=&amp;quot;字符串&amp;quot; 解释 这个”字符串”代表在 for 循环的 array 中 item 的某个“属性”该“属性” 的值需要是列表中唯一的字符串或数字，且不能动态改变。用于被遍历的组件需要多个属性的时候。  123456789//test.jsdata: &amp;#123;    input_data: [        &amp;#123; id: 1, unique: &quot;">
 
 
 
@@ -160,16 +160,20 @@ var _hmt = _hmt || [];
             
         </h1>
         <div class="content">
-            <h2 id="普通用法"><a href="#普通用法" class="headerlink" title="普通用法"></a><a name="rtk1uz"></a>普通用法</h2><p><code>wx:key=&quot;字符串&quot;</code></p>
-<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a><a name="tm8sdk"></a>解释</h3><blockquote>
-<p>这个”字符串”代表在 for 循环的 array 中 item 的某个“属性”<br>该“属性” 的值需要是列表中唯一的字符串或数字，且不能动态改变。<br>用于被遍历的组件需要多个属性的时候。<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//test.js</span></span><br><span class="line">data: &#123;</span><br><span class="line">    input_data: [</span><br><span class="line">        &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">unique</span>: <span class="hljs-string">"unique1"</span> &#125;,</span><br><span class="line">        &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">unique</span>: <span class="hljs-string">"unique2"</span> &#125;,</span><br><span class="line">        &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">unique</span>: <span class="hljs-string">"unique3"</span> &#125;,</span><br><span class="line">        &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">unique</span>: <span class="hljs-string">"unique4"</span> &#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+            <p><a name="rtk1uz"></a></p>
+<h2 id="普通用法"><a href="#普通用法" class="headerlink" title="普通用法"></a>普通用法</h2><p><code>wx:key=&quot;字符串&quot;</code><br><a name="tm8sdk"></a></p>
+<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><blockquote>
+<p>这个”字符串”代表在 for 循环的 array 中 item 的某个“属性”<br>该“属性” 的值需要是列表中唯一的字符串或数字，且不能动态改变。<br>用于被遍历的组件需要多个属性的时候。</p>
 </blockquote>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//test.js</span></span><br><span class="line">data: &#123;</span><br><span class="line">    input_data: [</span><br><span class="line">        &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">unique</span>: <span class="hljs-string">"unique1"</span> &#125;,</span><br><span class="line">        &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">unique</span>: <span class="hljs-string">"unique2"</span> &#125;,</span><br><span class="line">        &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">unique</span>: <span class="hljs-string">"unique3"</span> &#125;,</span><br><span class="line">        &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">unique</span>: <span class="hljs-string">"unique4"</span> &#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//test.wxml</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"id:&#123;&#123;item.id&#125;&#125;"</span>   <span class="hljs-attr">wx:for</span>=<span class="hljs-string">"&#123;&#123;input_data&#125;&#125;"</span>  <span class="hljs-attr">wx:key</span>=<span class="hljs-string">"unique"</span>  /&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="特殊用法"><a href="#特殊用法" class="headerlink" title="特殊用法"></a><a name="6v9lun"></a>特殊用法</h2><p><code>wx:key=&quot;*this&quot;</code></p>
-<h3 id="解释-1"><a href="#解释-1" class="headerlink" title="解释"></a><a name="q41hbg"></a>解释</h3><blockquote>
-<p>保留关键字”*this”代表在 for 循环中的 item 本身，<br>这种表示需要 item 本身是一个唯一的字符串或者数字<br>用于组件仅需要一个属性，且属性值唯一。<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//test.js</span></span><br><span class="line">data: &#123;</span><br><span class="line">    numberArray: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>],</span><br><span class="line">    stringArray:[<span class="hljs-string">'aaa'</span>,<span class="hljs-string">'ccc'</span>,<span class="hljs-string">'fff'</span>,<span class="hljs-string">'good'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a name="6v9lun"></a></p>
+<h2 id="特殊用法"><a href="#特殊用法" class="headerlink" title="特殊用法"></a>特殊用法</h2><p><code>wx:key=&quot;*this&quot;</code><br><a name="q41hbg"></a></p>
+<h3 id="解释-1"><a href="#解释-1" class="headerlink" title="解释"></a>解释</h3><blockquote>
+<p>保留关键字”*this”代表在 for 循环中的 item 本身，<br>这种表示需要 item 本身是一个唯一的字符串或者数字<br>用于组件仅需要一个属性，且属性值唯一。</p>
 </blockquote>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//test.js</span></span><br><span class="line">data: &#123;</span><br><span class="line">    numberArray: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>],</span><br><span class="line">    stringArray:[<span class="hljs-string">'aaa'</span>,<span class="hljs-string">'ccc'</span>,<span class="hljs-string">'fff'</span>,<span class="hljs-string">'good'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//test.wxml</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"id:&#123;&#123; item &#125;&#125;"</span>   <span class="hljs-attr">wx:for</span>=<span class="hljs-string">"&#123;&#123;numberArray&#125;&#125;"</span>  <span class="hljs-attr">wx:key</span>=<span class="hljs-string">"*this"</span>  /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"id:&#123;&#123; item &#125;&#125;"</span>   <span class="hljs-attr">wx:for</span>=<span class="hljs-string">"&#123;&#123;stringArray&#125;&#125;"</span>  <span class="hljs-attr">wx:key</span>=<span class="hljs-string">"*this"</span>  /&gt;</span></span><br></pre></td></tr></table></figure>
 
         </div>
@@ -306,7 +310,7 @@ window.changyan.api.config({
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        14
+                        15
                     </p>
                 </div>
             </div>
@@ -388,7 +392,7 @@ window.changyan.api.config({
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/关于我/" style="font-size: 10px;">关于我</a> <a href="/tags/初创公司的一些事儿/" style="font-size: 10px;">初创公司的一些事儿</a> <a href="/tags/博客搭建/" style="font-size: 20px;">博客搭建</a> <a href="/tags/好用的工具/" style="font-size: 10px;">好用的工具</a> <a href="/tags/小技巧/" style="font-size: 15px;">小技巧</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/语雀/" style="font-size: 15px;">语雀</a> <a href="/tags/身边事儿/" style="font-size: 15px;">身边事儿</a> <a href="/tags/鼓捣一下/" style="font-size: 20px;">鼓捣一下</a>
+        <a href="/tags/Hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/关于我/" style="font-size: 10px;">关于我</a> <a href="/tags/初创公司的一些事儿/" style="font-size: 10px;">初创公司的一些事儿</a> <a href="/tags/博客搭建/" style="font-size: 16.67px;">博客搭建</a> <a href="/tags/好用的工具/" style="font-size: 10px;">好用的工具</a> <a href="/tags/小技巧/" style="font-size: 20px;">小技巧</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/语雀/" style="font-size: 13.33px;">语雀</a> <a href="/tags/身边事儿/" style="font-size: 13.33px;">身边事儿</a> <a href="/tags/鼓捣一下/" style="font-size: 16.67px;">鼓捣一下</a>
     </div>
 </div>
 
@@ -402,6 +406,25 @@ window.changyan.api.config({
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/xezr90.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="半自动拉取千聊音频与PPT">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-13T06:06:13.000Z">2019-03-13</time></div>
+                    <a href="/xezr90.html" class="has-link-black-ter is-size-6">半自动拉取千聊音频与PPT</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -479,25 +502,6 @@ window.changyan.api.config({
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/ma0pri.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="1️⃣wx:key">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-03T08:34:47.000Z">2019-01-03</time></div>
-                    <a href="/ma0pri.html" class="has-link-black-ter is-size-6">1️⃣wx:key</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -516,7 +520,7 @@ window.changyan.api.config({
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -623,7 +627,7 @@ window.changyan.api.config({
                 <div class="control">
                     <a class="tags has-addons" href="/tags/小技巧/">
                         <span class="tag">小技巧</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -680,6 +684,25 @@ window.changyan.api.config({
         
         <article class="media">
             
+            <a href="/xezr90.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="半自动拉取千聊音频与PPT">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-13T06:06:13.000Z">2019-03-13</time></div>
+                    <a href="/xezr90.html" class="has-link-black-ter is-size-6">半自动拉取千聊音频与PPT</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/okiiqt.html" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="批量删微博">
@@ -754,25 +777,6 @@ window.changyan.api.config({
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/ma0pri.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="1️⃣wx:key">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-03T08:34:47.000Z">2019-01-03</time></div>
-                    <a href="/ma0pri.html" class="has-link-black-ter is-size-6">1️⃣wx:key</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -791,7 +795,7 @@ window.changyan.api.config({
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -898,7 +902,7 @@ window.changyan.api.config({
                 <div class="control">
                     <a class="tags has-addons" href="/tags/小技巧/">
                         <span class="tag">小技巧</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 

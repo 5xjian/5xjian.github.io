@@ -2,25 +2,27 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>归档: 2019/1 - 5xjian&#39;s Studio</title>
+<title>半自动拉取千聊音频与PPT - 5xjian&#39;s Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Hello!?">
-<meta property="og:type" content="website">
-<meta property="og:title" content="5xjian&#39;s Studio">
-<meta property="og:url" content="https://www.5xjian.cn/archives/2019/01/index.html">
+    <meta name="description" content="1.获取千聊所有语信息：  课程界面可以获取的参数：   INIT_STATE.thousandLive.totalSpeakList：获取所有语音链接地址 https://m.qlchat.com/api/wechat/topic/pptList：获取所有分页PPT转图片的地址   里面每一个content+.m4a 重新排列在一个数组中：0、1、2、3、……    2.下载  根据重新排列的">
+<meta name="keywords" content="小技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="半自动拉取千聊音频与PPT">
+<meta property="og:url" content="https://www.5xjian.cn/xezr90.html">
 <meta property="og:site_name" content="5xjian&#39;s Studio">
-<meta property="og:description" content="Hello!?">
+<meta property="og:description" content="1.获取千聊所有语信息：  课程界面可以获取的参数：   INIT_STATE.thousandLive.totalSpeakList：获取所有语音链接地址 https://m.qlchat.com/api/wechat/topic/pptList：获取所有分页PPT转图片的地址   里面每一个content+.m4a 重新排列在一个数组中：0、1、2、3、……    2.下载  根据重新排列的">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T06:45:40.861Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5xjian&#39;s Studio">
-<meta name="twitter:description" content="Hello!?">
+<meta name="twitter:title" content="半自动拉取千聊音频与PPT">
+<meta name="twitter:description" content="1.获取千聊所有语信息：  课程界面可以获取的参数：   INIT_STATE.thousandLive.totalSpeakList：获取所有语音链接地址 https://m.qlchat.com/api/wechat/topic/pptList：获取所有分页PPT转图片的地址   里面每一个content+.m4a 重新排列在一个数组中：0、1、2、3、……    2.下载  根据重新排列的">
 
 
 
-<link rel="alternative" href="/atom.xml" title="5xjian&#39;s Studio" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="半自动拉取千聊音频与PPT" type="application/atom+xml">
 
 
 
@@ -98,7 +100,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo3.png" alt="5xjian&#39;s Studio" height="28">
+                <img src="/images/logo3.png" alt="半自动拉取千聊音频与PPT" height="28">
             
             </a>
         </div>
@@ -134,65 +136,159 @@ var _hmt = _hmt || [];
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-13T06:06:13.000Z">2019-03-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 587 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                半自动拉取千聊音频与PPT
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>1.获取千聊所有语信息：</p>
+<ol>
+<li>课程界面可以获取的参数：</li>
+</ol>
+<ul>
+<li><strong>INIT_STATE</strong>.thousandLive.totalSpeakList：获取所有语音链接地址</li>
+<li><a href="https://m.qlchat.com/api/wechat/topic/pptList" target="_blank" rel="noopener">https://m.qlchat.com/api/wechat/topic/pptList</a>：获取所有分页PPT转图片的地址</li>
+</ul>
+<ol>
+<li>里面每一个content+.m4a</li>
+<li>重新排列在一个数组中：0、1、2、3、……</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>2.下载</p>
+<ol>
+<li>根据重新排列的数组逐个下载</li>
+<li>合并</li>
+<li>输出</li>
+</ol>
+</blockquote>
+<p><strong>PHP解决</strong></p>
+<a id="more"></a>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span> </span><br><span class="line"><span class="hljs-comment">// $test：直接写入控制台JSON.stringify(__INIT_STATE__.thousandLive.totalSpeakList)的结果</span></span><br><span class="line">$test = &lt;&lt;&lt; string</span><br><span class="line">string;</span><br><span class="line"><span class="hljs-comment">// 排序 start</span></span><br><span class="line">$test_arr = json_decode($test);</span><br><span class="line">$real = [];</span><br><span class="line"><span class="hljs-keyword">foreach</span> ($test_arr <span class="hljs-keyword">as</span> $key =&gt; $value) &#123;</span><br><span class="line">  <span class="hljs-comment">// 转http下载</span></span><br><span class="line">	$real[$key] = str_replace(<span class="hljs-string">'https'</span>, <span class="hljs-string">'http'</span>, $value-&gt;content).<span class="hljs-string">'.m4a'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">// 排序 end</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// downFile("远程文件地址","保存目录");</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downFile</span><span class="hljs-params">($url,$flname,$path)</span></span>&#123;</span><br><span class="line">	<span class="hljs-comment">// echo $url;</span></span><br><span class="line">	$arr=parse_url($url);</span><br><span class="line">	$fileName = $flname;</span><br><span class="line">	$file=file_get_contents($url);</span><br><span class="line">	file_put_contents($path.$fileName,$file);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 下载</span></span><br><span class="line">$console = <span class="hljs-string">''</span>;</span><br><span class="line">$count = count($real);</span><br><span class="line"><span class="hljs-keyword">foreach</span> ($real <span class="hljs-keyword">as</span> $key =&gt; $value) &#123;</span><br><span class="line">	<span class="hljs-keyword">if</span> ($key!=$count<span class="hljs-number">-1</span>) &#123;</span><br><span class="line">		downFile($value,$key.<span class="hljs-string">'.m4a'</span>,<span class="hljs-string">'D:\\phpStudy\\PHPTutorial\\test\\down\\'</span>);</span><br><span class="line">		$console .= $key.<span class="hljs-string">'.aac|'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-keyword">echo</span> $console;</span><br><span class="line"><span class="hljs-keyword">echo</span> <span class="hljs-string">'下载完成！&lt;br/&gt;'</span>;</span><br><span class="line"> <span class="hljs-meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后下载了一大堆m4a文件，后面的思路用ffmpeg即可搞定<br>具体的ffmepg命令（.bat处理）：</p>
+<ul>
+<li><p>将所有的M4A转为AAC</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">for</span> %%a <span class="hljs-keyword">in</span> (<span class="hljs-string">"D:\phpStudy\PHPTutorial\test\down\ffmpeg\bin\*.m4a"</span>) <span class="hljs-keyword">do</span> ffmpeg -i <span class="hljs-string">"%%a"</span> -acodec copy <span class="hljs-string">"D:\phpStudy\PHPTutorial\test\down\ffmpeg\bin\tmp\%%~na.aac"</span></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将所有的AAC合并为一个result.aac（concat后面的文件可以直接运行PHP得到）</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i <span class="hljs-string">"concat:1.aac|2.aac"</span> -c copy result.aac</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AAC转为MP3</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i result.aac -b 1500 -ar 8000 -ac 2 -ab 32 -f mp3 result.mp3</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>同样的思路获取PPT</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span> </span><br><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">  $test：直接写入控制台Network抓取到的</span></span><br><span class="line"><span class="hljs-comment">  https://m.qlchat.com/api/wechat/topic/pptList</span></span><br><span class="line"><span class="hljs-comment">  返回包中[-&gt;data-&gt;file的json数据]的结果</span></span><br><span class="line"><span class="hljs-comment">**/</span></span><br><span class="line">$test = &lt;&lt;&lt; string</span><br><span class="line">string;</span><br><span class="line"></span><br><span class="line">$test_arr = json_decode($test);</span><br><span class="line">$real = [];</span><br><span class="line"><span class="hljs-keyword">foreach</span> ($test_arr <span class="hljs-keyword">as</span> $key =&gt; $value) &#123;</span><br><span class="line">	$real[$key] = str_replace(<span class="hljs-string">'https'</span>, <span class="hljs-string">'http'</span>, $value-&gt;url);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downFile</span><span class="hljs-params">($url,$flname,$path)</span></span>&#123;</span><br><span class="line">	<span class="hljs-comment">// echo $url;</span></span><br><span class="line">	$arr=parse_url($url);</span><br><span class="line">	$fileName = $flname;</span><br><span class="line">	$file=file_get_contents($url);</span><br><span class="line">	file_put_contents($path.$fileName,$file);</span><br><span class="line">&#125;</span><br><span class="line">$console = <span class="hljs-string">''</span>;</span><br><span class="line">$count = count($real);</span><br><span class="line"><span class="hljs-keyword">foreach</span> ($real <span class="hljs-keyword">as</span> $key =&gt; $value) &#123;</span><br><span class="line">	downFile($value,$key.<span class="hljs-string">'.jpg'</span>,<span class="hljs-string">'D:\\phpStudy\\PHPTutorial\\test\\down\\'</span>);</span><br><span class="line">	$console .= $key.<span class="hljs-string">'|'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-keyword">echo</span> $console;</span><br><span class="line"><span class="hljs-keyword">echo</span> <span class="hljs-string">'下载完成！&lt;br/&gt;'</span>;</span><br><span class="line"><span class="hljs-keyword">echo</span> <span class="hljs-string">"正在合成……"</span>;</span><br><span class="line"> <span class="hljs-meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后图片按照顺序合成PPT的话，很多软件都可以实现，这边给出两种方式：</p>
+<ul>
+<li>万彩办公大师OfficeBox，里面有个图片转PDF功能，很迅速</li>
+<li>一个在线合成的，不过不是很稳定好像：<a href="http://www.pdfdo.com/image-to-pdf.aspx" target="_blank" rel="noopener">http://www.pdfdo.com/image-to-pdf.aspx</a></li>
+</ul>
 
-<div class="card widget">
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/小技巧/">小技巧</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        一月 2019
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-01-25T03:24:56.000Z">2019-01-25</time>
-                        <a href="/mv2ole.html" class="has-link-black-ter is-size-6">【转】今日头条Api分析（部分可用）</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-01-09T09:06:18.000Z">2019-01-09</time>
-                        <a href="/pkuifo.html" class="has-link-black-ter is-size-6">2️⃣模板消息搜集：古人云</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-01-03T08:34:47.000Z">2019-01-03</time>
-                        <a href="/ma0pri.html" class="has-link-black-ter is-size-6">1️⃣wx:key</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wpay.jpg" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/okiiqt.html">
+                <span class="level-item">批量删微博</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="SOHUCS" sid="xezr90.html"></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+window.changyan.api.config({
+    appid: 'cyu5rnez0',
+    conf: 'prod_cd4363d77c945ee3b7289128c759d2ad'
+});
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -877,7 +973,7 @@ var _hmt = _hmt || [];
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo3.png" alt="5xjian&#39;s Studio" height="28">
+                    <img src="/images/logo3.png" alt="半自动拉取千聊音频与PPT" height="28">
                 
                 </a>
             </div>
