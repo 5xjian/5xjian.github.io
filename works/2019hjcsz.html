@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/wap.css?2">
+    <title>首页</title>
+</head>
+<body>
+<div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
+    <a href="#top" title="">
+        <img class="am-gotop-icon-custom" src="https://i2.vzan.cc/image/liveimg/png/20190618/2c96c344bf424643942de2479500e9d1.png" />
+    </a>
+</div>
+
+<div class="pet_mian" id="top">
+<div class="pet_content_main">
+  <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+  <div class="am-list-news-bd">
+
+  <ul class="am-list">
+    <li class="am-g am-list-item-desced pet_list_one_block">
+         <div class="pet_article_user_block">
+           <div class="pet_article_user_img">
+           <div class="pet_article_user_shadow"></div>
+           <div class="pet_article_user_title" style="text-indent: 78px;font-size: 11px;">2019中国（深圳）国际春季茶产业博览会</div>
+           <img src="https://i2.vzan.cc/image/liveimg/jpg/20190618/a3dc2ea8e29e4a109a5858ba5a3a9f48.jpg" alt=""></div>
+           <div class="pet_article_user_info">
+              <div class="pet_article_user_info_ico"><img src="https://i2.vzan.cc/image/liveimg/png/20190618/86fe945085864feea678e8ec28ab505e.png" alt=""></div>华巨臣茶博会
+           </div>
+           <div class="am-list-item-text pet_article_user_nr" style="line-height: 1.5em;-webkit-line-clamp: 3;max-height: 4.6em;">2019中国（深圳）国际春季茶产业博览会于6月27日~30日在深圳会展中心举行。《是茶文化》新媒体联合华巨臣茶博会独家直播精彩活动！</div>
+         </div>
+    </li>
+  </ul>
+</div></div></div>
+<div class="pet_circle_nav"></div>
+<div class="pet_content_main">
+  <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+  <div class="am-list-news-bd">
+  <ul class="am-list">
+      <li class="am-g am-list-item-desced pet_list_one_block">
+        <a href="http://live.ichanfeng.com/live/tvchat-1448153573" target="_blank">
+           <div class="pet_article_user_block">
+           <div class="pet_article_user_img" style="margin-bottom:18px;">
+             <div class="pet_article_user_shadow"></div>
+             <div class="pet_article_user_title" style="text-align:center;text-indent:0px;bottom:8px;font-size:18px;">第九届国际武林斗茶大会</div>
+             <img src="https://i2cut.vzan.cc/image/liveImage/jpeg/2019/6/17/091715e4280d4b85e14668a27b559b0ecb3f4f.jpeg" alt="">
+           </div>
+             <div class="am-list-item-text pet_article_user_nr" style="line-height: 1.6em;-webkit-line-clamp: 4;max-height: 8.6em;">2019年6月28日-6月30日，武林斗茶大会将再次启幕，在深圳茶博会现场举办第九届国际武林斗茶大会，并诚邀茶界英豪前来，以斗为契，以茶会友，寄创新于竞争，开一代之风流！</div>
+           </div>
+        </a>
+      </li>
+  </ul>
+  </div>
+  </div>
+
+</div>
+<div class="pet_article_dowload pet_dowload_more_top_off">
+      <div class="pet_article_dowload_title">关于《是茶文化》新媒体</div>
+      <div class="pet_article_dowload_content pet_dowload_more_top_bg"><div class="pet_article_dowload_triangle pet_dowload_more_top_san"></div>
+      <div class="pet_article_dowload_ico"><img src="https://i2.vzan.cc/image/liveimg/jpg/20190618/e6b34bf37ea848cfbac0a0b9157a2dd6.jpg" alt=""></div>
+      <div class="pet_article_dowload_content_font">
+        《是茶文化》新媒体，隶属于广州市禅风文化传媒有限公司，是一家专注茶文化、服务茶行业的广州媒体。
+      </div>
+      <div class="pet_article_dowload_all">
+        <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIwNTExNTgwMw==&scene=124#wechat_redirect" class="pet_article_dowload_Az am-icon-more"> 更多</a>
+      </div>
+      </div>
+      <div class="pet_article_footer_info">Copyright(c)2019 《是茶文化》新媒体 All Rights Reserved</div>
+</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script>
+$(function(){
+
+    // 动态计算新闻列表文字样式
+    auto_resize();
+    $(window).resize(function() {
+        auto_resize();
+    });
+    $('.am-list-thumb img').load(function(){
+        auto_resize();
+    });
+
+    $('.am-list > li:last-child').css('border','none');
+    function auto_resize(){
+        $('.pet_list_one_nr').height($('.pet_list_one_img').height());
+
+    }
+        $('.pet_nav_gengduo').on('click',function(){
+            $('.pet_more_list').addClass('pet_more_list_show');
+       });
+        $('.pet_more_close').on('click',function(){
+            $('.pet_more_list').removeClass('pet_more_list_show');
+        });
+});
+
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1264615053'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1264615053' type='text/javascript'%3E%3C/script%3E"));</script>
+<style>
+  #cnzz_stat_icon_1264615053{
+    display: none;
+  }
+</style>
+</body>
+</html>
